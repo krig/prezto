@@ -30,6 +30,16 @@ if [[ -z "$LANG" ]]; then
 fi
 
 #
+# Identity
+#
+export NAME="Kristoffer Gronlund"
+export EMAIL="krig@koru.se"
+
+if [ -f $HOME/Dropbox/my-ip.txt ]; then
+  export VAGRANT_HOST="$(cat $HOME/Dropbox/my-ip.txt)"
+fi
+
+#
 # Paths
 #
 
@@ -43,6 +53,9 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /home/krig/bin
+  /home/krig/go/bin
+  /home/krig/.cargo/bin
   /usr/local/{bin,sbin}
   $path
 )
