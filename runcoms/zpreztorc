@@ -37,8 +37,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'git' \
   'syntax-highlighting' \
-  'ssh' \
   'prompt'
+#  'ssh' \
 
 #
 # Autosuggestions
