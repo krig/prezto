@@ -13,6 +13,12 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
+if [ -x firefox ]; then
+  export BROWSER='firefox --new-tab'
+elif [ -x chromium ]; then
+  export BROWSER='chromium --new-tab'
+fi
+
 #
 # Editors
 #
