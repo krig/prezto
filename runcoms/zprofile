@@ -13,10 +13,10 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
-if [ -x firefox ]; then
-  export BROWSER='firefox --new-tab'
-elif [ -x chromium ]; then
-  export BROWSER='chromium --new-tab'
+if which firefox 1>/dev/null 2>&1; then
+  export BROWSER="$(which firefox)"
+elif which chromium 1>/dev/null 2>&1; then
+  export BROWSER="$(which chromium)"
 fi
 
 #
